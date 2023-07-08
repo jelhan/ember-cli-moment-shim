@@ -155,16 +155,8 @@ module.exports = {
         case 'all':
           timezonePath = 'builds/moment-timezone-with-data.js';
           break;
-        case '2010-2020':
-          this.ui.writeLine(
-            chalk.yellow(
-              '[ember-cli-moment-shim] "2010-2020" is deprecated, use "subset" within config/environment\nDiscussion: https://github.com/jasonmit/ember-cli-moment-shim/issues/121'
-            )
-          );
         case 'subset':
-        case '2012-2022':
-        case '2010-2020':
-          timezonePath = 'builds/moment-timezone-with-data-*.js';
+          timezonePath = 'builds/moment-timezone-with-data-10-year-range.js';
           break;
         case 'none':
           timezonePath = 'moment-timezone.js';
